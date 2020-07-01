@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms1="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+             mc:Ignorable="d"
+             x:Class="SampleApp.Views.MediaPlayer">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Grid.RowSpan="5" Source="https://vivek.blob.core.windows.net/vivekfiles/body-of-water-2397649.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+                <Label Grid.Row="0" Text="Xamarin Forms"  
+                   FontSize="40"  
+                   TextColor="Azure"/>
+                <Label Grid.Row="1" Text="Video Player Application"  
+                   FontSize="58"  
+                   TextColor="BlueViolet"/>
+                <Button Grid.Row="2" x:Name="PlayStopButtonText"  
+                    Text="Play"   
+                    Clicked="PlayStopButton"  
+                    TextColor="BlueViolet"/>
+                <forms1:VideoView Grid.Row="3" HeightRequest="400" x:Name="videoPlayer" AspectMode="AspectFill" IsVisible="False"
+                             WidthRequest="202"  
+                             />
+
+                <Grid Grid.Row="4" x:Name="GrdLoader" IsVisible="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="40" WidthRequest="40" BackgroundColor="Transparent">
+                    <Slider HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="pos" ThumbColor="Blue"
+                                   BackgroundColor="Transparent"/>
+                </Grid>
+
+
+                <StackLayout Grid.Row="5" BackgroundColor="Red" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                     Margin="20, 0">
+                    <Label TextColor="White" Text="{Binding Path=Position,
+                                  StringFormat='{0:hh\\:mm\\:ss}'}"
+                   VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+
+                    <Label TextColor="White" Text="{Binding Path=TimeToEnd,
+                                  StringFormat='{0:hh\\:mm\\:ss}'}"
+                   VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </Grid>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

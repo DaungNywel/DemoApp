@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.sampleapp" android:installLocation="preferExternal">
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <application android:label="SampleApp.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCecKhYrO59MJim3gdh0U5vQFwR2Ef2pkA" />
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.sampleapp.fileprovider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@drawable/file_paths"></meta-data>
+    </provider>
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="SampleApp" android:theme="@style/MainTheme" android:name="crc64810f1a4ad1fccbc4.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:configChanges="orientation|screenSize|uiMode" android:name="crc646957603ea1820544.MediaPickerActivity" />
+    <service android:name="crc64ef8b66e166c17e87.MediaPlayerService">
+      <intent-filter>
+        <action android:name="com.xamarin.action.PLAY" />
+        <action android:name="com.xamarin.action.PAUSE" />
+        <action android:name="com.xamarin.action.STOP" />
+        <action android:name="com.xamarin.action.TOGGLEPLAYBACK" />
+        <action android:name="com.xamarin.action.NEXT" />
+        <action android:name="com.xamarin.action.PREVIOUS" />
+      </intent-filter>
+    </service>
+    <receiver android:name="crc64ef8b66e166c17e87.RemoteControlBroadcastReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.MEDIA_BUTTON" />
+      </intent-filter>
+    </receiver>
+    <service android:name="crc64a98abb514ffad9f1.KeepAliveService" />
+    <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="crc64f98dd38067c0c88b.WebAuthenticatorActivity" />
+    <activity android:label="@string/title_activity_webview" android:theme="@android:style/Theme.DeviceDefault" android:name="crc64f98dd38067c0c88b.WebViewActivity" />
+    <activity android:label="Web Authenticator Native Browser" android:launchMode="singleTop" android:name="crc64f98dd38067c0c88b.WebAuthenticatorNativeBrowserActivity" />
+    <receiver android:name="crc64f98dd38067c0c88b.CustomTabsActionsBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.ConnectivityBroadcastReceiver" />
+    <provider android:authorities="com.companyname.sampleapp.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="xamarin.essentials.fileProvider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xamarin_essentials_fileprovider_file_paths" />
+    </provider>
+    <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.sampleapp.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.sampleapp" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:style/Theme.Translucent.NoTitleBar" p6:replace="android:launchMode" xmlns:p6="http://schemas.android.com/tools" />
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+    </service>
+    <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:authorities="com.companyname.sampleapp.firebaseinitprovider" android:exported="false" android:initOrder="100" />
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+</manifest>

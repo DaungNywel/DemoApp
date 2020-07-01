@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SampleApp.Model"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="false"  
+            
+             x:Class="SampleApp.Views.HomePage" 
+             Title="HomePage">   
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="CameraPage" x:Name="CameraPage" Clicked="CameraPage_Clicked"></Button>
+            <Button Text="CustomPositionBar" x:Name="CustomPositionBar" Clicked="CustomPositionBar_Clicked"></Button>
+            <Button Text="DefaultPlayer" x:Name="DefaultPlayer" Clicked="DefaultPlayer_Clicked"></Button>
+            <Button Text="Download" x:Name="Download" Clicked="Download_Clicked"></Button>
+            <Button Text="Location" x:Name="Location" Clicked="Location_Clicked"></Button>
+            <Button Text="MediaPlayer" x:Name="MediaPlayer" Clicked="MediaPlayer_Clicked"></Button>
+            <Button Text="Facebook Login" x:Name="FBLogin" Clicked="FBLogin_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

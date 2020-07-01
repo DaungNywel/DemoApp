@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:control="clr-namespace:SampleApp.Control" 
+             mc:Ignorable="d"  NavigationPage.HasNavigationBar="false" BackgroundColor="Black"
+             x:Class="SampleApp.Views.MasterPage" Title="Menu">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--Header-->           
+            
+            <Grid Grid.Row="0" BackgroundColor="DodgerBlue" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <CarouselView x:Name="carouselForm" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="220" WidthRequest="500"
+                                                         Margin ="0, 0, 0, 0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                                          Position="{Binding Position, Mode=TwoWay}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid RowSpacing="0">
+                                        <Image Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding sourceImg}"/>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <control:CarouselIndicators x:Name="indicatorview" IndicatorHeight="20" IndicatorWidth="20" Grid.Column="0" Grid.ColumnSpan="2"
+                                                                Margin="0,0,0,-60" SelectedIndicator="FullGrayCircle" UnselectedIndicator="GrayCircle" Position="{Binding Position ,Mode=TwoWay}" 
+                                                             HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+
+                <Image Grid.Column="0" Margin="20,10,0,0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Source="imgx">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ProfileCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Grid.Column="1" Margin="0,10,20,0" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="40" Source="IconNotificationRadius"></Image>
+            </Grid>
+            
+            <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never" Margin="0,-60,0,0">
+                <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0" HeightRequest="250" BackgroundColor="Black" CornerRadius="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Margin="15,0,15,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+            <!--footer-->
+            <Grid Grid.Row="2" BackgroundColor="Transparent" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <BoxView BackgroundColor="Gray" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="1"></BoxView>
+                <Image Grid.Column="0" Source="home" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                <Image Grid.Column="1" Source="tv" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+                <Image Grid.Column="2" Source="more" HorizontalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"></Image>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

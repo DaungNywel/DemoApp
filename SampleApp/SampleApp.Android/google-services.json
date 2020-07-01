@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462261379631",
+    "firebase_url": "https://asiacabtest.firebaseio.com",
+    "project_id": "asiacabtest",
+    "storage_bucket": "asiacabtest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462261379631:android:5089c52d10b94ebe8fdcda",
+        "android_client_info": {
+          "package_name": "com.fusion.notilabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462261379631-n2eb34pj466pq0cjr4gh2uoe4bcetctq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGpFHQ5NUlT4ncwIBfnzK8XiaJpT2UpQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462261379631-n2eb34pj466pq0cjr4gh2uoe4bcetctq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\SampleApp\SampleApp\SampleApp.iOS\obj\iPhoneSimulator\Debug\SampleApp.iOS.csprojAssemblyReference.cache

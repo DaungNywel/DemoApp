@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:SampleApp.Views"
+            xmlns:mr="http://xamarin.com/schemas/2014/forms"
+            mc:Ignorable="d"
+             x:Class="SampleApp.Views.HomeTapPage">
+    <mr:TabbedPage.Children>
+
+        <ContentPage Title="Page 1">
+            <Grid VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+
+                <Label Text="Page 1 Label" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                <ScrollView Grid.Row="1">
+                    <Label Text="{Binding Text}" />
+                </ScrollView>
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Page 2">
+            <Grid VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+
+                <Label Text="Page 2 Label" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                <ScrollView Grid.Row="1">
+                    <Label Text="{Binding Text}" />
+                </ScrollView>
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Page 3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+
+                <Label Text="Page 3 Label" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                <ScrollView Grid.Row="1">
+                    <Label Text="{Binding Text}" />
+                </ScrollView>
+            </Grid>
+        </ContentPage>
+
+    </mr:TabbedPage.Children>
+</TabbedPage>
