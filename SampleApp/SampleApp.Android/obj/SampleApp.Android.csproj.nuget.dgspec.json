@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SampleApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj": {}
+    "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj": {}
   },
   "projects": {
-    "C:\\SampleApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj": {
+    "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SampleApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj",
+        "projectUniqueName": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj",
         "projectName": "SampleApp.Android",
-        "projectPath": "C:\\SampleApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj",
+        "projectPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp.Android\\SampleApp.Android.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\SampleApp\\SampleApp\\SampleApp.Android\\obj\\",
+        "outputPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj": {
-                "projectPath": "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj"
+              "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj": {
+                "projectPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj": {
+    "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj",
+        "projectUniqueName": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj",
         "projectName": "SampleApp",
-        "projectPath": "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj",
+        "projectPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\SampleApp\\SampleApp\\SampleApp\\obj\\",
+        "outputPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

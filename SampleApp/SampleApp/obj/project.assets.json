@@ -922,11 +922,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj",
+      "projectUniqueName": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj",
       "projectName": "SampleApp",
-      "projectPath": "C:\\SampleApp\\SampleApp\\SampleApp\\SampleApp.csproj",
+      "projectPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\SampleApp.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\SampleApp\\SampleApp\\SampleApp\\obj\\",
+      "outputPath": "C:\\SampleApp\\DemoApp\\DemoApp\\SampleApp\\SampleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
